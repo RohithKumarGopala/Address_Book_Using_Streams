@@ -1,78 +1,102 @@
 package com.addressBookSystem;
 
 public class AddressBookSystem {
-    private String f_name;
-    private String l_name;
-    private String address;
-    private String city;
-    private String state;
-    private String zip;
-    private String ph_no;
-    private String email;
-    public AddressBookSystem() {
+    String firstName = new String();
+    String lastName = new String();
+    String address = new String();
+    String city = new String();
+    String state = new String();
+    int zip;
+    long phoneNumber;
+    String email = new String();
+    private String FirstName;
+    private String LastName;
+
+    public AddressBookSystem(String firstName, String lastName, String address, String city, String state, int zip, long phoneNumber, String email) {
     }
-    public String getF_name() {
-        return f_name;
-    }
-    public void setF_name(String f_name) {
-        this.f_name = f_name;
-    }
-    public String getL_name() {
-        return l_name;
-    }
-    public void setL_name(String l_name) {
-        this.l_name = l_name;
-    }
-    public String getAddress() {
-        return address;
-    }
-    public void setAddress(String address) {
-        this.address = address;
-    }
-    public String getState() {
-        return state;
-    }
-    public void setState(String state) {
-        this.state = state;
-    }
-    public String getZip() {
-        return zip;
-    }
-    public void setZip(String zip) {
-        this.zip = zip;
-    }
-    public String getPh_no() {
-        return ph_no;
-    }
-    public void setPh_no(String ph_no) {
-        this.ph_no = ph_no;
-    }
+
     public String getEmail() {
         return email;
     }
+
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public long getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = Long.parseLong(phoneNumber);
+    }
+
+    public int getZip() {
+        return zip;
+    }
+
+    public void setZip(int zip) {
+        this.zip = zip;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
     public String getCity() {
         return city;
     }
+
     public void setCity(String city) {
         this.city = city;
-    }public AddressBookSystem(String f_name,String l_name,String address,String city,String state,String zip,String ph_no,String email) {
-        this.f_name = f_name;
-        this.l_name = l_name;
-        this.address = address;
-        this.city = city;
-        this.state = state;
-        this.zip = zip;
-        this.ph_no = ph_no;
-        this.email = email;
     }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setLastName(String LastName) {
+        this.lastName = LastName;
+    }
+
+    public String getLastName() {
+        return LastName;
+    }
+
+    public void setFirstName(String FirstName) {
+        this.FirstName = FirstName;
+    }
+
+    public String getFirstName() {
+        return FirstName;
+    }
+
+    public AddressBookSystem(String FirstName, String LastName, String address, String city, String state, int zip, int phoneNumber ){
+        this.FirstName=FirstName;
+        this.LastName=LastName;
+        this.address=address;
+        this.city=city;
+        this.state=state;
+        this.zip=zip;
+        this.phoneNumber=phoneNumber;
+
+    }
+    public AddressBookSystem(){
+        super();
+    }
+    @Override
     public String toString() {
-        return "\nFirst name: "+f_name+"\nLast name: "+l_name
-                +"\nAddress: "+address+"\nCity: "+city
-                +"\nState: "+state+"\nZip: "+zip
-                +"\nPhone number: "+ph_no+"\nEmail address: "+email;
+        return "Employee [name=" + this.FirstName +" "+ this.LastName + ", Address=" + this.address + ", City="
+                + this.city + ", state=" + this.state + ", zip=" + this.zip
+                + ", phone=" + this.phoneNumber + "]";
     }
 }
 
